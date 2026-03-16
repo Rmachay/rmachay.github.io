@@ -167,8 +167,9 @@
   footer p { font-size: 0.75rem; color: rgba(255,255,255,0.2); letter-spacing: 0.06em; }
   .footer-logo { font-family: 'Playfair Display', serif; font-size: 0.95rem; font-weight: 600; color: rgba(200,169,110,0.3); letter-spacing: 0.04em; }
 
-  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.animate { opacity: 0; transform: translateY(24px); }
+  .reveal.animate.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 1024px) {
     nav { padding: 1.25rem 2rem; }
@@ -217,7 +218,7 @@
     <div class="hero-bg-pattern"></div>
     <div class="hero-grid-overlay"></div>
     <div class="hero-stat-stack">
-      <div class="hero-stat-card"><div class="stat-number">&#8364;4M</div><div class="stat-label">Annualized Cost Savings Delivered</div></div>
+      <div class="hero-stat-card"><div class="stat-number">$4M+</div><div class="stat-label">Annualized Cost Savings Delivered</div></div>
       <div class="hero-stat-card"><div class="stat-number">80%</div><div class="stat-label">Reduction in IT Provisioning Time</div></div>
       <div class="hero-stat-card"><div class="stat-number">6+</div><div class="stat-label">M&amp;A Integrations Led</div></div>
       <div class="hero-stat-card"><div class="stat-number">6K+</div><div class="stat-label">Global Users Supported</div></div>
@@ -234,7 +235,7 @@
       <div class="section-label">About</div>
       <h2 class="section-heading">IT leadership<br>built for <em>scale.</em></h2>
       <p class="about-bio">I'm a Global IT Director with a track record of building enterprise-grade IT organizations from the ground up — and keeping them performing through aggressive growth phases, M&amp;A activity, and organizational complexity.</p>
-      <p class="about-bio">My background spans <strong>identity infrastructure, enterprise security, system automation,</strong> and <strong>cross-functional leadership</strong> across organizations scaling from 50 to 6,000+ users globally. I've operated at the intersection of strategy and execution, owning everything from Active Directory architecture to board-level IT roadmaps.</p>
+      <p class="about-bio">My background spans <strong>identity infrastructure, enterprise security, system automation,</strong> and <strong>cross-functional leadership</strong> across organizations scaling from 50 to 6,000+ users globally. I've operated at the intersection of strategy and execution, owning everything from Active Directory architecture to executive IT roadmaps.</p>
       <p class="about-bio">Based in Downers Grove, IL — available for Director/VP engagements and fractional IT leader retainers, both remote and hybrid.</p>
     </div>
     <div class="about-right reveal">
@@ -243,8 +244,8 @@
         <div class="expertise-item"><h4>Identity &amp; Access</h4><p>Active Directory, Entra ID, SSO architecture, and JML automation at enterprise scale.</p></div>
         <div class="expertise-item"><h4>Security &amp; Compliance</h4><p>HITRUST certification delivery, enterprise security frameworks, and risk program ownership.</p></div>
         <div class="expertise-item"><h4>IT Strategy</h4><p>OKR/KPI-driven IT planning, executive roadmaps, and technology portfolio rationalization.</p></div>
-        <div class="expertise-item"><h4>Team Leadership</h4><p>Built and scaled IT orgs of 1-10 engineers; global operations across North America and international offices.</p></div>
-        <div class="expertise-item"><h4>Automation &amp; Ops</h4><p>80% faster provisioning through workflow automation; $4M SaaS portfolio management and optimization.</p></div>
+        <div class="expertise-item"><h4>Team Leadership</h4><p>Built and scaled IT orgs of 10+ engineers; global operations across North America, South America, the UK, and Southeast Europe.</p></div>
+        <div class="expertise-item"><h4>Automation &amp; Ops</h4><p>80% faster provisioning through workflow automation; $4M+ SaaS portfolio management and optimization.</p></div>
       </div>
       <div class="companies-served">
         <h3>Previous Organizations</h3>
@@ -278,7 +279,7 @@
         <div class="service-number">02</div>
         <h3>System Selection &amp; Implementation</h3>
         <p>Vendor evaluation, RFP management, and implementation oversight for enterprise platforms — ITSM, MDM, SSO, and beyond. I own the process so your team doesn't have to.</p>
-        <div class="service-deliverables"><span class="deliverable-tag">Vendor Evaluation</span><span class="deliverable-tag">RFP Management</span><span class="deliverable-tag">Implementation OPS</span><span class="deliverable-tag">Change Management</span></div>
+        <div class="service-deliverables"><span class="deliverable-tag">Vendor Evaluation</span><span class="deliverable-tag">RFP Management</span><span class="deliverable-tag">Implementation OPS</span><span class="deliverable-tag">Change Management</span><span class="deliverable-tag">Workforce Enablement</span></div>
       </div>
       <div class="service-card">
         <div class="service-number">03</div>
@@ -289,8 +290,14 @@
       <div class="service-card">
         <div class="service-number">04</div>
         <h3>Fractional IT Leadership</h3>
-        <p>Ongoing strategic IT leadership for companies that need executive-level direction without a full-time hire. Monthly retainer engagements with board-ready reporting, team coaching, and roadmap ownership.</p>
-        <div class="service-deliverables"><span class="deliverable-tag">IT Strategy</span><span class="deliverable-tag">Team Leadership</span><span class="deliverable-tag">Board Reporting</span><span class="deliverable-tag">Vendor Management</span></div>
+        <p>Ongoing strategic IT leadership for companies that need executive-level direction without a full-time hire. Monthly retainer engagements with executive-ready reporting, team coaching, and roadmap ownership.</p>
+        <div class="service-deliverables"><span class="deliverable-tag">IT Strategy</span><span class="deliverable-tag">Team Leadership</span><span class="deliverable-tag">Vendor Management</span><span class="deliverable-tag">AI &amp; Automation Readiness</span></div>
+      </div>
+      <div class="service-card" style="grid-column: 1 / -1;">
+        <div class="service-number">05</div>
+        <h3>IT Financial Management</h3>
+        <p>Full ownership of IT budgeting, forecasting, and portfolio rationalization. I bring structure and visibility to IT spend — identifying savings opportunities, optimizing vendor contracts, and aligning technology investment to business outcomes.</p>
+        <div class="service-deliverables"><span class="deliverable-tag">Budget Ownership</span><span class="deliverable-tag">SaaS Rationalization</span><span class="deliverable-tag">Vendor Cost Optimization</span><span class="deliverable-tag">IT Spend Reporting</span></div>
       </div>
     </div>
   </div>
@@ -303,8 +310,8 @@
       <h2 class="section-heading">Results that speak.</h2>
     </div>
     <div class="metrics-row reveal">
-      <div class="metric-card"><div class="metric-value"><sup>&#8364;</sup>4M</div><div class="metric-desc">Annualized Cost Savings via Application Portfolio Consolidation</div></div>
-      <div class="metric-card"><div class="metric-value">80%</div><div class="metric-desc">Reduction in IT Provisioning Time Through Automation</div></div>
+      <div class="metric-card"><div class="metric-value">$4M<sup>+</sup></div><div class="metric-desc">Annualized Cost Savings via Application Portfolio Consolidation &amp; Rationalization</div></div>
+      <div class="metric-card"><div class="metric-value">80%</div><div class="metric-desc">Reduction in IT Provisioning Time Through Workflow Automation</div></div>
       <div class="metric-card"><div class="metric-value">6<sup>+</sup></div><div class="metric-desc">M&amp;A Integrations Led, 50-2,000 Employee Scale</div></div>
       <div class="metric-card"><div class="metric-value">6K<sup>+</sup></div><div class="metric-desc">Global Users Supported Across Enterprise Operations</div></div>
     </div>
@@ -317,7 +324,6 @@
       <div class="section-label reveal">Experience</div>
       <h2 class="section-heading reveal">A decade of<br>building what <em>scales.</em></h2>
       <p class="reveal">From hands-on technical buildout to global IT strategy at 6,000+ user scale — a career spent creating infrastructure, teams, and operating models that grow with the business.</p>
-      <a href="mailto:ryan@ryanmachay.com" class="exp-cta reveal">Download Full Resume</a>
     </div>
     <div class="timeline">
       <div class="timeline-item reveal">
@@ -328,7 +334,7 @@
           <p class="timeline-subtitle">Global digital transformation consultancy delivering experience, commerce, and technology solutions.</p>
           <p>Owned global IT strategy and operations at enterprise scale post-acquisition. Led a 6-person IT engineering team maintaining security, scalability, and operational excellence across Active Directory, Entra ID, and Microsoft 365.</p>
           <div class="timeline-wins">
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Delivered <strong>&#8364;4M in annualized cost savings</strong> through post-acquisition application portfolio rationalization.</span></div>
+            <div class="win-item"><span class="win-icon">&#9670;</span><span>Delivered <strong>$4M+ in annualized cost savings</strong> through post-acquisition application portfolio rationalization.</span></div>
             <div class="win-item"><span class="win-icon">&#9670;</span><span>Primary IT stakeholder for M&amp;A initiatives — led integration strategy across business processes, technology platforms, and security/compliance.</span></div>
             <div class="win-item"><span class="win-icon">&#9670;</span><span>Drove IT strategic planning using OKR and KPI frameworks, establishing measurable accountability across annual and quarterly goals.</span></div>
           </div>
@@ -340,7 +346,7 @@
           <div class="timeline-meta"><span class="timeline-date">2020-2024</span><span class="timeline-company">Kin + Carta · 1,500+ employees</span></div>
           <h3>Global Head of IT Transformation</h3>
           <p class="timeline-subtitle">Digital transformation consultancy specializing in data, technology, and connected experiences.</p>
-          <p>Owned global IT strategy, operations, and transformation across North America and Buenos Aires. Led 10 direct reports and managed a $4M+ annual SaaS portfolio through aggressive growth and two acquisitions.</p>
+          <p>Owned global IT strategy, operations, and transformation across North America, LATAM, the UK, and Southeast Europe. Led 10 direct reports and managed a $4M+ annual SaaS portfolio through aggressive growth and five acquisitions. Drove the standardization and globalization of IT operating processes — designing, documenting, and automating core workflows to create a consistent, scalable foundation across all regions.</p>
           <div class="timeline-wins">
             <div class="win-item"><span class="win-icon">&#9670;</span><span><strong>Reduced IT provisioning time by 80%</strong> through automated global onboarding and JML processes.</span></div>
             <div class="win-item"><span class="win-icon">&#9670;</span><span>Directed <strong>HITRUST certification</strong> end-to-end for a 1,200-person organization — on schedule and within budget.</span></div>
@@ -352,9 +358,9 @@
         <div class="timeline-line"><div class="timeline-dot"></div></div>
         <div class="timeline-content">
           <div class="timeline-meta"><span class="timeline-date">2015-2020</span><span class="timeline-company">Solstice · 600+ employees</span></div>
-          <h3>Director of IT</h3>
+          <h3>Head of IT</h3>
           <p class="timeline-subtitle">Digital innovation studio building mobile, cloud, and emerging technology products.</p>
-          <p>Built and scaled the IT function from the ground up through a period of rapid headcount growth. Established foundational infrastructure, identity systems, and security programs that supported the company's scale from startup to mid-market.</p>
+          <p>Built the IT function from scratch — hired and grew the team, then owned every layer of the technology foundation through a period of rapid headcount growth. Selected and implemented the company's core IT stack across ITSM, MDM, endpoint security, AV, and office networking. Created the first iteration of IT processes and policies, establishing the operating model that scaled the organization from startup to mid-market.</p>
           <div class="timeline-wins">
             <div class="win-item"><span class="win-icon">&#9670;</span><span>Architected core identity and access management infrastructure (Active Directory, SSO) that scaled with the organization.</span></div>
             <div class="win-item"><span class="win-icon">&#9670;</span><span>Built IT support operations and escalation frameworks that maintained SLA adherence through 3x headcount growth.</span></div>
@@ -370,7 +376,7 @@
     <div class="fractional-left reveal">
       <div class="section-label" style="color:var(--navy-light);">Fractional IT Leader</div>
       <h2 class="section-heading" style="color:var(--text-dark);">IT leadership.<br><em>On your terms.</em></h2>
-      <p class="fractional-desc">PE-backed companies and founder-led businesses scaling past 100 employees often hit an IT inflection point — too complex for an office manager to handle, not yet ready for a full-time IT leader. That's exactly where I operate.</p>
+      <p class="fractional-desc">PE-backed companies and founder-led businesses scaling past 200 employees often hit an IT inflection point — too complex for an office manager to handle, not yet ready for a full-time IT leader. That's exactly where I operate.</p>
       <div class="fractional-points">
         <div class="fp-item"><span class="fp-num">01</span><p class="fp-text"><strong>No full-time overhead.</strong> Access Director-to-VP-level IT leadership at a fraction of the cost of a full-time hire.</p></div>
         <div class="fp-item"><span class="fp-num">02</span><p class="fp-text"><strong>Immediate traction.</strong> Proven engagement frameworks — no ramp time, no learning curve. Day 1 readiness across assessment, strategy, and execution.</p></div>
@@ -384,7 +390,7 @@
         <div class="tier-label">Tier 01</div>
         <h4>Executive Advisory</h4>
         <p class="tier-price"><strong>$2,000-3,000/mo</strong> · 10-15 hrs/month</p>
-        <p>Board-level guidance, quarterly IT planning, vendor strategy, and on-demand advisory access. Ideal for founders who need a strategic IT voice without the overhead.</p>
+        <p>Executive-level guidance, quarterly IT planning, vendor strategy, and on-demand advisory access. Ideal for founders who need a strategic IT voice without the overhead.</p>
       </div>
       <div class="tier-card featured">
         <div class="tier-label">Tier 02 — Most Popular</div>
@@ -408,19 +414,11 @@
     <h2 class="section-heading">Ready to talk?</h2>
     <p class="contact-desc">Whether you're hiring for a full-time IT leadership role or exploring a fractional engagement, I'd like to hear what you're building. Let's figure out if there's a fit.</p>
     <div class="contact-links">
-      <a href="mailto:ryan@ryanmachay.com" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        Email Me
-      </a>
       <a href="https://linkedin.com/in/ryanmachay" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
-      <a href="#" class="contact-link">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-        View Resume
-      </a>
-      <a href="https://calendly.com/ryanmachay" target="_blank" class="contact-link">
+      <a href="https://calendly.com/ryan-machay" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
         Book a Call
       </a>
@@ -433,7 +431,7 @@
   <p>2026 Ryan Machay · Downers Grove, IL · IT Leadership and Fractional IT Leader Services</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 var els = document.querySelectorAll('.reveal');
 var io = new IntersectionObserver(function(entries) {
   entries.forEach(function(entry) {
@@ -445,10 +443,4 @@ var io = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1 });
 els.forEach(function(el) { io.observe(el); });
 
-var nav = document.querySelector('nav');
-window.addEventListener('scroll', function() {
-  nav.style.background = window.scrollY > 80 ? 'rgba(8,15,24,0.97)' : 'rgba(13,27,42,0.85)';
-});
-</script>
-</body>
-</html>
+var nav = document.
