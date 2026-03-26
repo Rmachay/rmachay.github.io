@@ -77,16 +77,27 @@
   .section-heading em { color: var(--gold); font-style: italic; }
 
   #about { background: var(--navy); padding: 8rem 6rem; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; align-items: start; max-width: 1200px; margin: 0 auto; }
+  .about-inner { max-width: 1200px; margin: 0 auto; }
+  .about-top { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; align-items: start; margin-bottom: 4rem; }
   .about-bio { font-size: 1rem; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; }
   .about-bio strong { color: rgba(255,255,255,0.9); font-weight: 500; }
-  .about-right { display: flex; flex-direction: column; gap: 1.5rem; }
   .expertise-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .expertise-item { border-left: 2px solid var(--gold); padding: 1rem 1.25rem; background: rgba(255,255,255,0.02); transition: background 0.2s; }
   .expertise-item:hover { background: rgba(200,169,110,0.05); }
   .expertise-item h4 { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--white); margin-bottom: 0.35rem; }
   .expertise-item p { font-size: 0.8rem; color: var(--slate); line-height: 1.5; }
-  .companies-served { margin-top: 1rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); }
+  .about-roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+  .role-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(200,169,110,0.1); padding: 2rem; transition: all 0.3s; }
+  .role-card:hover { background: rgba(200,169,110,0.05); border-color: rgba(200,169,110,0.25); }
+  .role-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; }
+  .role-date { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--gold); opacity: 0.7; }
+  .role-company { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); background: rgba(255,255,255,0.04); padding: 0.2rem 0.6rem; border: 1px solid rgba(255,255,255,0.06); }
+  .role-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: var(--white); margin-bottom: 1.25rem; line-height: 1.3; }
+  .role-wins { display: flex; flex-direction: column; gap: 0.6rem; }
+  .role-win { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+  .role-win-icon { color: var(--gold); font-size: 0.5rem; margin-top: 0.45rem; flex-shrink: 0; }
+  .role-win strong { color: var(--gold-light); font-weight: 500; }
+  .companies-served { padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.06); }
   .companies-served h3 { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--slate); margin-bottom: 1.25rem; }
   .company-logos { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
   .company-tag { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.25); letter-spacing: 0.04em; transition: color 0.2s; }
@@ -121,27 +132,6 @@
   .metric-value { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 900; color: var(--gold); line-height: 1; margin-bottom: 0.5rem; }
   .metric-value sup { font-size: 1.5rem; vertical-align: super; }
   .metric-desc { font-size: 0.82rem; color: var(--slate); line-height: 1.5; text-transform: uppercase; letter-spacing: 0.06em; }
-
-  #experience { background: var(--navy); padding: 8rem 6rem; }
-  .experience-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 6rem; max-width: 1200px; margin: 0 auto; align-items: start; }
-  .experience-sticky { position: sticky; top: 8rem; height: fit-content; }
-  .experience-sticky p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 2rem; }
-  .exp-cta { display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(200,169,110,0.3); padding-bottom: 0.25rem; transition: border-color 0.2s; }
-  .exp-cta:hover { border-color: var(--gold); }
-  .timeline { display: flex; flex-direction: column; }
-  .timeline-item { display: grid; grid-template-columns: 1px 1fr; gap: 2.5rem; padding-bottom: 3.5rem; }
-  .timeline-line { background: rgba(200,169,110,0.15); position: relative; }
-  .timeline-dot { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 10px; height: 10px; border-radius: 50%; background: var(--gold); border: 2px solid var(--navy); box-shadow: 0 0 0 3px rgba(200,169,110,0.2); }
-  .timeline-meta { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
-  .timeline-date { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--gold); opacity: 0.7; }
-  .timeline-company { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--slate); background: rgba(255,255,255,0.04); padding: 0.2rem 0.6rem; border: 1px solid rgba(255,255,255,0.06); }
-  .timeline-content h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
-  .timeline-subtitle { font-size: 0.82rem; color: rgba(255,255,255,0.4); font-style: italic; margin-bottom: 1rem; }
-  .timeline-content p { font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 1rem; }
-  .timeline-wins { display: flex; flex-direction: column; gap: 0.5rem; }
-  .win-item { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
-  .win-icon { color: var(--gold); font-size: 0.6rem; margin-top: 0.45rem; flex-shrink: 0; }
-  .win-item strong { color: var(--gold-light); font-weight: 500; }
 
   #fractional { background: var(--off-white); padding: 8rem 6rem; }
   .fractional-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: center; }
@@ -187,9 +177,8 @@
     .hero-right { display: none; }
     .hero-left { padding: 8rem 2rem 4rem; }
     #about, #services, #experience, #impact, #fractional, #contact { padding: 5rem 2rem; }
-    .about-grid, .fractional-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .experience-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .experience-sticky { position: static; }
+    .about-top { grid-template-columns: 1fr; gap: 3rem; }
+    .about-roles { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .metrics-row { grid-template-columns: 1fr 1fr; }
     footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
@@ -205,8 +194,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#fractional">Fractional IT Leader</a></li>
+    <li><a href="#fractional">Work With Me</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Let's Connect</a>
@@ -238,30 +226,52 @@
 <div class="section-divider"></div>
 
 <section id="about">
-  <div class="about-grid">
-    <div class="about-left reveal">
-      <div class="section-label">About</div>
-      <h2 class="section-heading">IT leadership<br>built for <em>scale.</em></h2>
-      <p class="about-bio">My background spans <strong>identity infrastructure, enterprise security, system automation,</strong> and <strong>cross-functional leadership</strong> — across organizations that grew from startup to 6,000+ users globally. At Kin + Carta, I built and standardized the IT function across four continents and reduced provisioning time by 80%. At Valtech, I led post-acquisition IT operations at enterprise scale and delivered <strong>$4M+ in annualized cost savings</strong> through application portfolio rationalization.</p>
-      <p class="about-bio">I work best with executives who are ready to transform IT from a back-office function into a strategic partner to the business. Based in Downers Grove, IL — available for Director/VP engagements and fractional IT leader retainers, both remote and hybrid.</p>
-    </div>
-    <div class="about-right reveal">
-      <div class="expertise-row">
-        <div class="expertise-item"><h4>M&amp;A Integration</h4><p>End-to-end IT due diligence, system consolidation, and post-merger alignment across 6+ acquisitions.</p></div>
-        <div class="expertise-item"><h4>Identity &amp; Access</h4><p>Active Directory, Entra ID, SSO architecture, and JML automation at enterprise scale.</p></div>
-        <div class="expertise-item"><h4>Security &amp; Compliance</h4><p>HITRUST certification delivery, enterprise security frameworks, and risk program ownership.</p></div>
-        <div class="expertise-item"><h4>IT Strategy</h4><p>OKR/KPI-driven IT planning, executive roadmaps, and technology portfolio rationalization.</p></div>
-        <div class="expertise-item"><h4>Team Leadership</h4><p>Built and scaled IT orgs of 10+ engineers; global operations across North America, South America, the UK, and Southeast Europe.</p></div>
-        <div class="expertise-item"><h4>Automation &amp; Ops</h4><p>80% faster provisioning through workflow automation; $4M+ SaaS portfolio management and optimization.</p></div>
+  <div class="about-inner">
+    <div class="about-top reveal">
+      <div class="about-left">
+        <div class="section-label">About</div>
+        <h2 class="section-heading">IT leadership<br>built for <em>scale.</em></h2>
       </div>
-      <div class="companies-served">
-        <h3>Previous Organizations</h3>
-        <div class="company-logos">
-          <span class="company-tag">Valtech</span>
-          <span class="company-divider">&#8212;</span>
-          <span class="company-tag">Kin + Carta</span>
-          <span class="company-divider">&#8212;</span>
-          <span class="company-tag">Solstice</span>
+      <div class="about-right">
+        <p class="about-bio">I've led IT through rapid growth, global scale, and M&A — building the systems, security, and operating models companies rely on as complexity increases.</p>
+        <p class="about-bio">I work best with executives who are ready to transform IT from a back-office function into a strategic partner to the business.</p>
+      </div>
+    </div>
+    <div class="about-roles reveal">
+      <div class="role-card">
+        <div class="role-meta">
+          <span class="role-date">2024–2025</span>
+          <span class="role-company">Valtech · 6,000+ employees</span>
+        </div>
+        <div class="role-title">Global IT Director</div>
+        <div class="role-wins">
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Delivered <strong>$4M+ in annualized cost savings</strong> through post-acquisition application portfolio rationalization.</span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Primary IT stakeholder for M&amp;A initiatives — led integration strategy across business processes, technology platforms, and security/compliance.</span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Drove IT strategic planning using OKR and KPI frameworks across global enterprise operations.</span></div>
+        </div>
+      </div>
+      <div class="role-card">
+        <div class="role-meta">
+          <span class="role-date">2020–2024</span>
+          <span class="role-company">Kin + Carta · 1,500+ employees</span>
+        </div>
+        <div class="role-title">Global Head of IT Transformation</div>
+        <div class="role-wins">
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span><strong>Reduced IT provisioning time by 80%</strong> through automated global onboarding and JML processes.</span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Directed <strong>HITRUST certification</strong> end-to-end for a 1,200-person organization — on schedule and within budget.</span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Led IT through five acquisitions, standardizing operations across North America, LATAM, the UK, and Southeast Europe.</span></div>
+        </div>
+      </div>
+      <div class="role-card">
+        <div class="role-meta">
+          <span class="role-date">2015–2020</span>
+          <span class="role-company">Solstice · 600+ employees</span>
+        </div>
+        <div class="role-title">Head of IT</div>
+        <div class="role-wins">
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Built the IT function from the ground up — first hire through fully operational team, supporting <strong>3x headcount growth.</strong></span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Architected core identity and access management infrastructure (Active Directory, SSO) that scaled with the organization.</span></div>
+          <div class="role-win"><span class="role-win-icon">&#9670;</span><span>Selected and implemented the company's first core IT stack across ITSM, MDM, endpoint security, and office networking.</span></div>
         </div>
       </div>
     </div>
@@ -315,61 +325,6 @@
       <div class="metric-card"><div class="metric-value">80%</div><div class="metric-desc">Reduction in IT Provisioning Time Through Workflow Automation</div></div>
       <div class="metric-card"><div class="metric-value">6<sup>+</sup></div><div class="metric-desc">M&amp;A Integrations Led, 50-2,000 Employee Scale</div></div>
       <div class="metric-card"><div class="metric-value">6K<sup>+</sup></div><div class="metric-desc">Global Users Supported Across Enterprise Operations</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="experience">
-  <div class="experience-grid">
-    <div class="experience-sticky">
-      <div class="section-label reveal">Experience</div>
-      <h2 class="section-heading reveal">A decade of<br>building what <em>scales.</em></h2>
-      <p class="reveal">From hands-on technical buildout to global IT strategy at 6,000+ user scale — a career spent creating infrastructure, teams, and operating models that grow with the business.</p>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-meta"><span class="timeline-date">2024-2025</span><span class="timeline-company">Valtech · 6,000+ employees</span></div>
-          <h3>Global IT Director</h3>
-          <p class="timeline-subtitle">Global digital transformation consultancy delivering experience, commerce, and technology solutions.</p>
-          <p>Owned global IT strategy and operations at enterprise scale post-acquisition. Led a 6-person IT engineering team maintaining security, scalability, and operational excellence across Active Directory, Entra ID, and Microsoft 365.</p>
-          <div class="timeline-wins">
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Delivered <strong>$4M+ in annualized cost savings</strong> through post-acquisition application portfolio rationalization.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Primary IT stakeholder for M&amp;A initiatives — led integration strategy across business processes, technology platforms, and security/compliance.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Drove IT strategic planning using OKR and KPI frameworks, establishing measurable accountability across annual and quarterly goals.</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-meta"><span class="timeline-date">2020-2024</span><span class="timeline-company">Kin + Carta · 1,500+ employees</span></div>
-          <h3>Global Head of IT Transformation</h3>
-          <p class="timeline-subtitle">Digital transformation consultancy specializing in data, technology, and connected experiences.</p>
-          <p>Owned global IT strategy, operations, and transformation across North America, LATAM, the UK, and Southeast Europe. Led 10 direct reports and managed a $4M+ annual SaaS portfolio through aggressive growth and five acquisitions. Drove the standardization and globalization of IT operating processes — designing, documenting, and automating core workflows to create a consistent, scalable foundation across all regions.</p>
-          <div class="timeline-wins">
-            <div class="win-item"><span class="win-icon">&#9670;</span><span><strong>Reduced IT provisioning time by 80%</strong> through automated global onboarding and JML processes.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Directed <strong>HITRUST certification</strong> end-to-end for a 1,200-person organization — on schedule and within budget.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Led multiple M&amp;A IT integrations (50-2,000 employees) from due diligence through Day 1 cutover and post-merger stabilization.</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="timeline-item reveal">
-        <div class="timeline-line"><div class="timeline-dot"></div></div>
-        <div class="timeline-content">
-          <div class="timeline-meta"><span class="timeline-date">2015-2020</span><span class="timeline-company">Solstice · 600+ employees</span></div>
-          <h3>Head of IT</h3>
-          <p class="timeline-subtitle">Digital innovation studio building mobile, cloud, and emerging technology products.</p>
-          <p>Built the IT function from the ground up — from first hire to a fully operational team, processes, and technology foundation — through a period of rapid headcount growth from startup to mid-market.</p>
-          <div class="timeline-wins">
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Selected and implemented the company's first core IT stack across ITSM, MDM, endpoint security, antivirus, and office networking.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Architected core identity and access management infrastructure (Active Directory, SSO) that scaled with the organization.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Created the first iteration of IT processes and policies, establishing the operating model that supported 3x headcount growth.</span></div>
-            <div class="win-item"><span class="win-icon">&#9670;</span><span>Built IT support operations and escalation frameworks that maintained SLA adherence through sustained organizational growth.</span></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
